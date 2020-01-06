@@ -17,7 +17,7 @@ int main() {
         dp[0][i] = 0;
     for (int i = 1; i <= lens; i++)
         for (int j = 1; j <= lent; j++)
-            if (s[i] == t[i])
+            if (s[i] == t[j])
                 dp[i][j] = dp[i - 1][j - 1] + 1;
             else
                 dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
