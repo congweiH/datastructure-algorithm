@@ -9,8 +9,8 @@ ll C(int n, int m) {
      * 计算组合数C(n,m)
      */
     ll res = 1;
-    for (int i = 0; i < m; i++) {
-        res = res * (n - i) / (i + 1);
+    for (int i = 1; i <= m; i++) {
+        res = res * (n - i + 1) / i;
     }
     return res;
 }
